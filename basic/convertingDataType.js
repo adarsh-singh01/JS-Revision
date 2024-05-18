@@ -21,3 +21,25 @@ let mark=55
 let stringNum=String(mark)
 console.log(stringNum)
 console.log(typeof stringNum)
+
+
+//*************OPERATION************
+
+num=22
+negNum=-num
+//console.log(negNum)
+
+let str1="chai"
+let str2=" peelo"
+
+str3=str1+str2
+//console.log(str3)
+console.log("1"+2+2)//122
+console.log(1+2+"2")//32
+
+console.log(+true)
+console.log(+"")
+
+let gameCounter=100
+console.log(++gameCounter)//101 bcoz it increments before printing
+//console.log(gameCounter++)//100 bcoz it prints then increments
