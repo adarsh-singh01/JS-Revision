@@ -13,4 +13,4 @@ let marksInNumber=Number(marks)
 console.log(typeof marksInNumber)
 console.log(marksInNumber) //returns NaN...undefined in Number is NaN
 //null in Number will be converted to 0
-//boolean true is 1 false is 0
+//boolean true is 1 false is 0.
