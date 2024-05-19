@@ -34,3 +34,32 @@ console.log(Object.keys(fbUser))//array of keys
 console.log(Object.values(fbUser))
 console.log(Object.entries(fbUser))//array of key,value in arrays
 console.log(Object.hasOwnProperty('isLoggedIn'))//tells whether key exist or not
+
+
+const course={
+    courseName:"js in hindi",
+    price:"990",
+    courseInstructor:"adarsh"
+}
+
+//console.log(course.courseInstructor)
+
+//destructuring 
+//const {courseInstructor}=course
+const {courseInstructor:instructor}=course
+console.log(instructor)
+
+
+//JSON
+
+// {
+//     "name":"hojo"
+//     "courseName":"DSA"
+//     "price":"Rs.9"
+// }
+
+
+[
+    {},
+    {}
+]
