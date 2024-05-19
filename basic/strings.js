@@ -37,4 +37,4 @@ console.log(url.replace('%20','-'))
 
 console.log(url.includes('adarsh'))//returns true or false
 
-console.log(gameName.split('-'));//returns an array on which 
+console.log(gameName.split('-'));//returns an array in which there is each element as word separated by the -
