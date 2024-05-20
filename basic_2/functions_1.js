@@ -23,3 +23,36 @@ function loginUserMsg(username){//you can also give dafalt values here ..ex:(use
     return `${username} just logged in`
 }
 console.log(loginUserMsg("adarsh"))//if arg is left empty then undefined will come
+
+
+//--------------------
+
+function calculateCartPrice(...num1){//it is rest operator...if (val1,val2,...num1)...then 1st twoo args will go in val1,val2...other will go in num1 array
+    return num1
+}
+
+console.log(calculateCartPrice(100,300,900))
+//passing an object
+const user={
+    username:"adarsh",
+    price:299
+}
+function handleObject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`)
+    
+}
+//handleObject(user)
+handleObject(
+    {
+        username:"darsh",
+        price:299
+    }
+)
+
+//passing an array
+const myArr=[299,388,6,899]
+function secondValue(getArr){
+    return getArr[1]
+}
+//console.log(secondValue(myArr))
+console.log(secondValue([299,388,6,899]))
