@@ -43,7 +43,7 @@ for (let index = 0; index <=20; index++) {
 for (let index = 0; index <=20; index++) {
     if(index==5){
         console.log(`5 is best..but continue loop`)
-        continue//break nhi hoga...lekin bs iss value k liye neeche nhi jaayega
+        continue//break nhi hoga...lekin bs iss value k liye neeche nhi jaayega.
     }
     console.log(`val of i is ${index}`)
     
