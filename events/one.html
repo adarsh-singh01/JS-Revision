@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // injecting a onclick event in the html tag itself is not feasible and not advised ... however in react we do this.
+
+
+    // document.getElementById('owl').onclick = function(){ //this is old method and does not allow propagation. So, use event listeners
+    //     alert("owl clicked")
+    // }
+
+     // attachEvent()//old method
+    // jQuery - on
+
+
+
+    //READ ABOUT THESE:
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false //default is false...this parameter refers to something event propagation)
+
+
+    //event propagation has 2 context :
+    //FALSE : EVENT BUBBLING//bubbles neeche se upar jata h
+    //TRUE : EVENT CAPTURING
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()//ye propagation hi band kr dega...ab upar wala execute nhi hoga
+    // }, false )
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();//default behaiour nhi hone dega
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+   
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {//tag name nhi hoga to agr google pe click kiya to sab udd jayega
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode//parentNode uska li de dega
+            removeIt.remove()
+        }
+    
+        
+    })
+    //alternate method
+    //removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
