@@ -19,12 +19,12 @@
 
 
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();//xhr is just a variable u can name it anything
     xhr.open('GET', requestUrl)
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
         if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)//...Object bana diya string ko ...Current context ki baat ho rhi isliye.
+            const data = JSON.parse(this.responseText)//...Object bana diya string ko ...Current context ki baat ho rhi isliye 'this' ka use kiya.
             console.log(typeof data);//ye string hai...object nhi
             console.log(data.followers);
         }
@@ -32,3 +32,9 @@
     xhr.send();
 </script>
 </html>
+
+
+<!--console is technically a part/not_part of js.....it is a debugging tool...it is browser's dev tool
+
+js is made on c++(js is wrapper of C++),
+js runntime gives console...Famous engine is V8-->
