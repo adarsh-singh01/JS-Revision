@@ -10,6 +10,7 @@ class User{
 
 class Teacher extends User{
     constructor(username,email,password){
+        //User.call(this,username)//Syd kuch aesa krna padta agr ES6 na hota to
         super(username)
         this.email=email
         this.password=password
