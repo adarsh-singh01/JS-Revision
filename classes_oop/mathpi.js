@@ -1,4 +1,4 @@
-const descripter = Object.getOwnPropertyDescriptor(Math, "PI")
+const descripter = Object.getOwnPropertyDescriptor(Math, "PI")//it tells that it is not writable
 
 // console.log(descripter);
 
