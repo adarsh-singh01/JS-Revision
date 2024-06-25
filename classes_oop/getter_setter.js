@@ -11,11 +11,11 @@ class User {
         this._email = value
     }
 
-    get password(){
+    get password(){//koi agr puche password kya hai to ye encrypted return hoga
         return `${this._password}hitesh`
     }
 
-    set password(value){
+    set password(value){//ye DB me save hoga
         this._password = value
     }
 }
